@@ -31,3 +31,5 @@ const membroTeam = [
     img: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
+
+console.log(membroTeam);
