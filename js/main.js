@@ -1,4 +1,5 @@
 'use strict';
+
 const membroTeam = [
   {
     nome: 'Wayne Barnett',
@@ -33,3 +34,22 @@ const membroTeam = [
 ];
 
 console.log(membroTeam);
+
+const container = document.querySelector('.container');
+container.append(teamDom('div', 'h2', 'p', 'p', 'nome', 'ruolo', 'img'));
+
+function teamDom(div, tag0, tag1, tag2, ob1, ob2, ob3) {
+  for (let i = 0; i < membroTeam.length; i++) {
+    const contenitoreStringa = document.createElement(div);
+    container.append(contenitoreStringa);
+    const stringa = document.createElement(tag0);
+    contenitoreStringa.append(stringa);
+    stringa.append(membroTeam[i][ob1]);
+    const ruolo = document.createElement(tag1);
+    contenitoreStringa.append(ruolo);
+    ruolo.append(membroTeam[i][ob2]);
+    const img = document.createElement(tag2);
+    contenitoreStringa.append(img);
+    img.append(membroTeam[i][ob3]);
+  }
+}
